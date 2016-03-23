@@ -43,7 +43,7 @@ describe('app', function () {
             expect(app.maxArray([1,'asd',3,2,1,1])).toEqual(false);
         });
         it('should return false when array is empty', function () {
-            expect(app.maxArray([])).toEqual(fasle);
+            expect(app.maxArray([])).toEqual(false);
         });
     });
     
@@ -54,8 +54,8 @@ describe('app', function () {
         it('should return max number contain in array', function () {
             expect(app.squareOdd([1,'asd',3,2,1,1])).toEqual(false);
         });
-        it('should return false if array is empty', function () {
-            expect(app.squareOdd([])).toEqual(fasle);
+        it('should return just strings', function(){
+            expect(app.squareOdd(['a','b','c'])).toEqual(['a','b','c']);
         });
     });
 });
